@@ -1,0 +1,77 @@
+@use "../Abstract/" as *;
+
+// Left Saeats
+.left {
+  .cinema-row {
+    transform: skew(-15deg);
+    margin: 0 6px;
+  }
+
+  .seat {
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+    background: linear-gradient(
+      to top,
+      #761818,
+      #761818,
+      #761818,
+      #761818,
+      #761818,
+      #b54041,
+      #f3686a
+    );
+    margin-bottom: 10px;
+    transform: skew(20deg);
+    margin-top: -32px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .row-2 {
+    transform: skew(-13deg);
+
+    .seat {
+      transform: skew(18deg);
+    }
+  }
+
+  .row-3 {
+    transform: skew(-12deg);
+
+    .seat {
+      transform: skew(16deg);
+    }
+  }
+
+  .row-4 {
+    transform: skew(-11deg);
+
+    .seat {
+      transform: skew(15deg);
+    }
+  }
+
+  .row-5 {
+    transform: skew(-10deg);
+
+    .seat {
+      transform: skew(12deg);
+    }
+  }
+
+  .row-6 {
+    transform: skew(-9deg);
+
+    .seat {
+      transform: skew(10deg);
+    }
+  }
+
+  .row-7 {
+    transform: skew(-7deg);
+
+    .seat {
+      transform: skew(8deg);
+    }
+  }
+}
