@@ -1,0 +1,16 @@
+@use "../Abstract/" as *;
+
+.movie-container {
+  margin: 1rem 0;
+
+  select {
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+  }
+}
