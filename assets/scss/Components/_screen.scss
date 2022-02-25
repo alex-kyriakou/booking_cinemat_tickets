@@ -1,1 +1,14 @@
 @use "../Abstract/" as *;
+
+.screen-container {
+  perspective: 700px;
+
+  .screen {
+    height: 300px;
+    width: 800px;
+    background-color: #fff;
+    transform: rotateX(70deg);
+    // transform: rotateY(20deg);
+    box-shadow: 0 -50px 500px rgba(255, 255, 255, 0.7);
+  }
+}

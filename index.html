@@ -11,21 +11,7 @@
     <script src="assets/app/app.js" defer></script>
   </head>
   <body>
-    <!-- Movies List Container -->
-    <div class="movie-container">
-      <label> Pick a movie:</label>
-      <select id="movie">
-        <option value="10">
-          MOONFALL - Η ΣΚΟΤΕΙΝΗ ΠΛΕΥΡΑ ΤΟΥ ΦΕΓΓΑΡΙΟΥ (€10)
-        </option>
-        <option value="8.5">
-          DEATH ON THE NILE - ΕΓΚΛΗΜΑ ΣΤΟΝ ΝΕΙΛΟ (€8.5)
-        </option>
-        <option value="7.5">SPIDER-MAN: NO WAY HOME (€7.5)</option>
-        <option value="9">EXTING (GR) - ΣΧΕΔΙΟ ΔΙΑΣΩΣΗΣ (ΜΕΤΑΓΛ) (€9)</option>
-      </select>
-    </div>
-
+    <!-- SEATS AND SCREEN -->
     <ul class="showcase">
       <li>
         <div class="seat"></div>
@@ -41,11 +27,28 @@
       </li>
     </ul>
 
-    <!-- SEATS AND SCREEN -->
+    <!-- Movies List Container -->
+    <div class="movie-container">
+      <label> Pick a movie:</label>
+      <select id="movie">
+        <option value="10">
+          MOONFALL - Η ΣΚΟΤΕΙΝΗ ΠΛΕΥΡΑ ΤΟΥ ΦΕΓΓΑΡΙΟΥ (€10)
+        </option>
+        <option value="8.5">
+          DEATH ON THE NILE - ΕΓΚΛΗΜΑ ΣΤΟΝ ΝΕΙΛΟ (€8.5)
+        </option>
+        <option value="7.5">SPIDER-MAN: NO WAY HOME (€7.5)</option>
+        <option value="9">EXTING (GR) - ΣΧΕΔΙΟ ΔΙΑΣΩΣΗΣ (ΜΕΤΑΓΛ) (€9)</option>
+      </select>
+    </div>
+
+    <!-- Ticket -->
+    <p class="text">
+      You have selected <span id="count">0</span> seats for a price of
+      <span id="total">0</span> euros.
+    </p>
 
     <div class="container">
-      <div class="screen"></div>
-
       <div class="cinema-seats left">
         <div class="cinema-row row-1">
           <div class="seat"></div>
@@ -190,11 +193,9 @@
         </div>
       </div>
     </div>
-
-    <!-- Ticket -->
-    <p class="text">
-      You have selected <span id="count">0</span> seats for a price of
-      <span id="total">0</span> euros.
-    </p>
+    <!-- Screen -->
+    <div class="screen-container">
+      <div class="screen"></div>
+    </div>
   </body>
 </html>

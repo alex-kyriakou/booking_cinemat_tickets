@@ -24,19 +24,28 @@ li {
 
 .container {
   display: flex;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex-direction: row-reverse;
+  margin: 2rem;
 }
 
 .cinema-seats {
   display: flex;
 }
-.cinema-seats .seat {
-  cursor: pointer;
+.cinema-seats.left .cinema-row:nth-of-type(4) {
+  margin-left: 3rem;
 }
-.cinema-seats .seat:hover:before {
+.cinema-seats.right .cinema-row:nth-of-type(4) {
+  margin-right: 3rem;
+}
+.cinema-seats .seat.selected {
+  background: linear-gradient(to top, #2f0d0d, #2f0d0d, #2f0d0d, #531515, #793132, #f3686a);
+}
+.cinema-seats .seat.occupied {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 7px;
+}
+.cinema-seats .seat:not(.occupied):hover:before {
+  cursor: pointer;
   content: "";
   position: absolute;
   top: 0;
@@ -45,28 +54,23 @@ li {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 7px;
 }
-.cinema-seats .seat.active:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 7px;
-}
 
 .movie-container {
-  margin: 1rem 0;
+  margin: 3rem 0rem 6rem 0rem;
 }
 .movie-container select {
   background-color: #fff;
   font-family: inherit;
   font-size: 14px;
+  font-weight: 700;
   border: none;
   border-radius: 0.5rem;
   outline: none;
   padding: 0.5rem 1rem;
   margin-left: 1rem;
+}
+.movie-container select option {
+  font-weight: 500;
 }
 
 .showcase {
@@ -74,12 +78,13 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid #761818;
+  border: 1px solid #761818;
   border-radius: 5px;
-  margin-bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: #777;
 }
 .showcase li {
-  padding: 1rem 3rem;
+  margin: 1rem 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +106,20 @@ li {
   border-radius: 7px;
 }
 
+.screen-container {
+  perspective: 700px;
+}
+.screen-container .screen {
+  height: 300px;
+  width: 800px;
+  background-color: #fff;
+  transform: rotateX(70deg);
+  box-shadow: 0 -50px 500px rgba(255, 255, 255, 0.7);
+}
+
+.left {
+  margin: 30px;
+}
 .left .cinema-row {
   transform: skew(-15deg);
   margin: 0 6px;
@@ -153,7 +172,7 @@ li {
 }
 
 .right {
-  margin-left: 70px;
+  margin: 30px;
 }
 .right .cinema-row {
   transform: skew(7deg);
