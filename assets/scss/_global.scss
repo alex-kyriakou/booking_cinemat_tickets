@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   // height: 100vh;
-  // overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 li {
@@ -31,7 +31,7 @@ li {
 .container {
   display: flex;
   flex-direction: row-reverse;
-  margin: 2rem;
+  // margin: 0;
 
   // position: absolute;
   // top: 70%;
@@ -91,9 +91,11 @@ li {
         #793132,
         #f3686a
       );
+      border: 2px solid green;
     }
 
     &.occupied {
+      border: 1px solid red;
       background: rgba(255, 255, 255, 0.6);
       border-radius: 7px;
     }
