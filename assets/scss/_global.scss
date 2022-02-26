@@ -27,10 +27,37 @@ li {
   list-style: none;
 }
 
+.btn {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+
+  font-size: 14px;
+  background: #3c3346;
+  color: #f3686a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  transition: 0.3s ease all;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:hover {
+    background: rgb(219, 205, 205);
+    color: #000;
+  }
+}
+
 // Seats Container
 .container {
   display: flex;
   flex-direction: row-reverse;
+  // background: rgba($color: #000000, $alpha: 0.1);
+  // border-radius: .5rem;
   // margin: 0;
 
   // position: absolute;

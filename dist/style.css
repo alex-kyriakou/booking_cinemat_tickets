@@ -23,6 +23,28 @@ li {
   list-style: none;
 }
 
+.btn {
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  background: #3c3346;
+  color: #f3686a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  transition: 0.3s ease all;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn:hover {
+  background: #dbcdcd;
+  color: #000;
+}
+
 .container {
   display: flex;
   flex-direction: row-reverse;
